@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #unordered{
+            list-style-type: square;/*none, circle, disc is also available*/
+        }
+        #2ndunordered{
+            list-style-type: circle;
+        }
+        #ordered{
+            list-style-type: decimal-leading-zero;/*decimal[1,2,..], lower-alpha[a,b,..], upper-alpha[A,B,..], lower-roman[i,ii,..], upper-roman[I,II,..]*/
+        }
+    </style>
+</head>
+<body>
+    <ul  id="unordered">
+        <li>Cricket</li>
+        <li>Volleyball</li>
+        <li>Football</li>
+    </ul>
+    <ol id="ordered">
+        <li>Cricket</li>
+        <li>Volleyball</li>
+        <li>Football</li>
+        <ul id="2ndunordered">
+            <li>Love</li>
+            <li>Passion</li>
+        </ul>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            border: 1px solid rebeccapurple;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 4px;
+            margin: 20px auto;
+        }
+        #top-left{
+            box-shadow: -5px -5px gray;
+        }
+        #bottom-right{
+            box-shadow: 5px 5px gray;
+        }
+        #bottom-right-blur-spread{
+            box-shadow: 5px 5px 5px 10px gray;
+            /*where the third parameter is for blur and the fourth parameter is for spread*/
+        }
+        #outer-spread{
+            box-shadow: 0px 0px 10px yellow;
+            /*the third parameter is spread here and this is mostly used to glow the box*/
+        }
+        #inset{
+            /*this will provide a shadow on the inner side of the box*/
+            box-shadow: inset -3px -3px 3px 4px white;
+            /*here the both negative signed paramter provides shadow on bottom-right*/
+        }
+    </style>
+</head>
+<body>
+    <h1>BOX SHADOW PROPERTY</h1>
+    <div id="top-left">TOP LEFT</div>
+    <div id="bottom-right">BOTTOM RIGHT</div>
+    <div id="bottom-right-blur-spread">BOTTOM RIGHT SPREAD</div>
+    <div id="outer-spread">OUTER SPREAD</div>
+    <div id="inset">INSET</div>
+</body>
+</html>

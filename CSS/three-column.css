@@ -1,0 +1,27 @@
+#page{
+    width: 906px;
+    margin: 0 auto;
+}
+#content{
+    background-color: gray;/*everything inside the content is floating so it woill provide this color to 0px*/
+    /*we need to put a dummy element and clear the float to provide background colour*/
+    padding: 15px;
+}
+#left-sidebar{
+    width: 20%;
+    float: left;
+    margin-right: 3%;
+}
+#main{
+    width: 50%;
+    float: left;
+    margin-right: 5%;
+    text-align: justify;
+}
+#right-sidebar{
+    float: left;
+    width: 20%;
+}
+.clear{
+    clear: both;
+}

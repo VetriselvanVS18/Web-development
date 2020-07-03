@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [title]{
+            /*this will select all the elements which has title key*/
+            color: red;
+        }
+        a[href^='https']{
+            /*this will select all the href key whose value starts with 'https'*/
+            color: green;
+        }
+        a[target='_blank']{
+            /*this will select all the target key with value '_blank'*/
+            color: hotpink;
+        }
+        img[alt*='smriti']{
+            /*this will select all the alt key with values(i.e: smriti-mandhana and smriti mandhana)*/
+            border: 4px solid red;
+        }
+        img[alt~='smriti']{
+            /*this will select all the alt key with value(i.e: smriti mandhana)*/
+            border: 8px solid green;
+        }
+        a[href$='.pdf']{
+            /*this will select all the href key whose value ends with '.pdf'*/
+            color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <p><acronym title="Indian Space Research Organisation">ISRO</acronym> is an acronym of Indian Space Research Organisation</p>
+        <p>This link will open in a new tab. <a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
+        <p><img src="smriti.mandhana1___B9Zhi-_JNIF___.jpg" alt="smriti-mandhana"></p>
+        <p><img src="smriti.mandhana1___B9Zhi-_JNIF___.jpg" alt="smriti mandhana"></p>
+        <p>Download pdf:<a href="toc.pdf">Table of content</a></p>
+        <p>This link will open in the same tab. <a href="https://www.facebook.com/">Facebook</a></p>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 50%;
+            border: 2px solid  rebeccapurple; 
+            margin: 0 auto;
+        }
+        h1{
+            border: 1px solid black;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        li:hover{
+            background-color: blueviolet;
+        }
+        ul{
+            background-color: chartreuse;
+            height: 50px;
+        }
+        /*'li' is an block-level element, so we need to convert it into inline inorder to get a horizontal display.
+        this can be achieved with the "DISPLAY" tag*/
+        li{
+            display: inline-block;
+            /*inline elements won't accept height,so we need to change 'display' value to 'inline-block' from 'inline'
+            in-order to give height to this 'li'*/
+            /*we can also change an inline element into block-level element using "display: block;"*/
+            height: 50px;
+            padding: 0 15px;
+            line-height: 50px;
+        }
+        /*to invisible a particular section*/
+        #coming-soon{
+            /*default value is visible*/
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>DISPLAY PROPERTY</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li> 
+            <li id="coming-soon"><a href="#">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

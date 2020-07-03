@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /*show is the default value*/
+            empty-cells: hide;/*this will hide the 4th empty cell.By giving this in the table selector 
+                               this will apply to all the empty cells in the table*/
+        }
+        td{
+            border: 1px solid violet;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Empty cells</h1>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

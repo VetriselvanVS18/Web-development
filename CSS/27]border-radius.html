@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            border: 1px solid rebeccapurple;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 4px;
+            margin: 20px auto;
+        }
+        #top-left{
+            border-top-left-radius: 15px;
+        }
+        #top-right{
+            border-top-right-radius: 15px;
+        }
+        #bottom-right{
+            border-bottom-right-radius: 15px;
+        }
+        #bottom-left{
+            border-bottom-left-radius: 15px;
+        }
+        #round{
+            border-radius: 360px;
+            /*border-radius can also take four parameters 
+                ORDER:
+                1]top-left
+                2]top-right
+                3]bottom-right
+                4]bottom-left
+            */
+            text-align: center;
+            line-height: 100px;/*line height = box height, to make the text appear in middle*/
+        }
+    </style>
+</head>
+<body>
+    <h1>BOX SHADOW PROPERTY</h1>
+    <div id="top-left">TOP LEFT</div>
+    <div id="top-right">TOP RIGHT</div>
+    <div id="bottom-right">BOTTOM RIGHT</div>
+    <div id="bottom-left">BOTTOM LEFT</div>
+    <div id="round">ROUND</div>
+</body>
+</html>

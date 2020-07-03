@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*inline style(1000) > id(100) > class,pseudo class,attribute(10) > element(1)*/
+        ul a{
+            color: chocolate;
+        }
+        li a{
+            color: purple;/*both 'ul a' and 'li a' has same specificity, so the last one will overwrite the previous one*/
+        }
+        #vs18{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1>CSS selector types</h1>
+        <p>This will explain how the selectors work</p>
+        <h2>Main Navigation</h2>
+            <ul id="child">
+                <li><a href="#" style="color: black;">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Company</a>
+                    <ul>
+                        <li><a href="#" id="vs18">vs18</a></li>
+                        <li><a href="#">vs18</a></li>
+                        <li><a href="#">vs18</a></li>
+                    </ul>
+                </li>
+            </ul>
+        <h2>Lorem ipsum</h2>
+        <p>Lorem, ipsum <a href="">Vetriselvan</a> dolor sit amet consectetur adipisicing elit. Quos, officia illo? Repellendus enim corrupti minima libero debitis aliquid voluptates ipsam, inventore, nesciunt totam rem impedit reprehenderit odit aliquam perferendis unde. Non, quo ut! Mollitia eius maiores praesentium dicta? Accusantium, est?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem perspiciatis ullam ab quibusdam iste sed, saepe vitae, tenetur, cupiditate eius cum explicabo officiis? Id commodi, eveniet quis dolorem necessitatibus, libero voluptatibus perferendis atque itaque natus illum. Ipsum architecto accusamus amet perspiciatis cupiditate quis, inventore beatae alias, quibusdam vitae modi doloribus quos odit. Veritatis explicabo nemo nihil itaque deserunt, iure similique harum odit saepe veniam totam dolores ipsum provident vitae neque eos illum laudantium, sed fugiat consequuntur expedita delectus dolorum! Assumenda ullam libero aut illo est dicta illum praesentium accusamus beatae quis veritatis nulla officiis ducimus laudantium hic nam sit, officia atque maiores cupiditate? Nisi, laboriosam. Earum necessitatibus cumque mollitia ad animi. Perspiciatis, aperiam ipsum recusandae voluptatum delectus accusamus velit neque. Aliquid quaerat cum, at autem voluptatem laboriosam labore ab omnis non voluptas similique ut architecto vero vel deserunt saepe iure animi laborum, modi, corrupti quae veniam. Perspiciatis adipisci voluptas earum. Atque alias ratione, doloremque nostrum quaerat reiciendis omnis accusamus quasi commodi! Vel repellendus, quidem sapiente nemo culpa impedit voluptatum magni exercitationem ut modi aut blanditiis qui. Illum aspernatur necessitatibus inventore velit, id consequuntur eligendi repellendus cum, harum doloribus maiores commodi, similique quo doloremque atque quae quidem assumenda ut. Reprehenderit.</p>
+    </div>
+</body>
+</html>
