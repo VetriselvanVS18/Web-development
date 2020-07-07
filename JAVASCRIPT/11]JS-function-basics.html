@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function greet(name, msg){
+            if(name) return 'Hi '+ name + '! ' + msg;
+            console.log('Im invisible if you provide name')
+            return 'Hi anonymous ' +  msg;
+        }
+        var greetmsg = greet('vetri', 'how are you?');
+        console.log(greetmsg);
+
+        //In javascript a function can be duplicated and the lastly created one will be executed all the time
+        function willbeDuplicated(){
+            console.log('I will be duplicated');
+        }
+        function willbeDuplicated(msg){
+            console.log(msg);
+            console.log('The lastly created function');
+        }
+        willbeDuplicated();//eventhough if you don't give parameters it will execute the lastly created function.
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT FUNCTION BASICS</h1>
+</body>
+</html>

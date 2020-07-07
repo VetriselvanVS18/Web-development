@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        log = console.log;
+        //Two types to create an object
+        //object constructor syntax
+        var obj1 = new Object();
+        //object literal syntax
+        var obj2 = {};
+
+        var person1 = new Object();
+        person1.name = 'vetri';
+        person1.profession = 'cricketer';
+
+        person1.sayHi = function(){
+            log('Hi! ' + person1.name);
+        }
+        person1.sayHi();
+
+        var person2 ={
+            name : 'smriti',
+            profession : 'cricketer',
+            sayHi : function(){
+                log('Hi! '+ this.name);
+            }
+        }
+        person2.sayHi();
+        
+        var person3 = person2;
+        person3.sayHi();
+        person2 = null;
+        person3.sayHi();
+        log(person3);
+
+        //person1.first name = 'something' => this will provide syntax error because of the gap between first and name.
+        //if we want gap in the property then we need to use person1['first name'] = 'something';
+        person1['first name'] = 'something';
+        log(person1);
+        var prpName = 'first name';
+        log(person1[prpName]);
+
+        //iterating to get all the values in an object
+        for(prop in person3){
+            log(person3[prop]);
+        }
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT OBJECTS PART-1</h1>
+</body>
+</html>

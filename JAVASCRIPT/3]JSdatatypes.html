@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //NUMBER
+        var age = 21;
+        var gpa = 8.7;
+        var octNum = 0255;//octal numbers can be provided in JS with '0' in begining
+        var hexNum = 0xFF;//hexa numbers can be provided in JS with '0x' in begining
+        var amount = 1.1e6;//e=exponential, this can also be provided in JS
+        console.log(age,gpa,octNum,hexNum,amount)
+        console.log(Number.MIN_VALUE)
+        console.log(Number.MAX_VALUE)
+        var mayBeInfinity = Number.MAX_VALUE + Number.MAX_VALUE;
+        console.log(mayBeInfinity);
+        var mayBeNegativeInfinity = -10/0;
+        console.log(mayBeNegativeInfinity);
+        //----------------------------------------------------------
+        //STRING
+        var name = 'vetri';
+        console.log(name);
+        //-----------------------------------------------------------
+        //BOOLEAN
+        var yes = true;//JS is case sensitive so the value of boolean should always be in full of lower case
+        var no = false;//In JS true != 1 and false != 0
+        console.log(yes,no);
+        //-----------------------------------------------------------
+        //NULL
+        var empty = null;
+        console.log(empty);
+        console.log(typeof empty);
+        //this 'typeof' will return the datatype of the variable, here it will return as object beacuse of null
+        //-----------------------------------------------------------
+        //undefined
+        var weird;
+        console.log(weird);
+        //------------------------------------------------------------
+        //typeof
+        var age = 40;
+        console.log(typeof age);
+        //JS is loosely/weekly type because we can change the type of the variable in any line of the code(i.e: age) 
+        age = "I'm 25 years old."
+        console.log(typeof age);
+        //------------------------------------------------------------
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT DATATYPES(TOTAL:6)</h1>
+    <h3>PRIMITIVE DATATYPES(5)</h3>
+    <ol>
+        <li>Number</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <li>null</li>
+        <li>undefined</li>
+    </ol>
+    <h3>REFERENCE DATATYPE(1)</h3>
+    <ol>
+        <li>Object</li>
+    </ol>
+</body>
+</html>

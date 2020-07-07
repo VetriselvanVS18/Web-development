@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //relational operators(< , > , <= , >= , == , !=)
+        let log = console.log;
+        log("10 > 5 =", 10 > 5);
+        log("15 < 8 =", 15 < 8);
+
+        log("16 >= 15 =", 16 >= 15);
+        log("21 <= 18 =", 21 <= 18);
+
+        log("15 == 15 =", 15 == 15);
+        log("15 != 15 =", 15 != 15);
+
+        log("15 == '15' =", 15 == 15);//string
+        log("15 != '15' =", 15 != 15);//string
+
+        //identical operators(=== , !==)
+        log("15 === '15' =", 15 === '15');//false
+        log("15 !== '15' =", 15 !== '15');//true
+        
+        //logical / boolean operators
+        log("!true =", !true);
+        log("!10 =",!10);
+
+        log("10 || 'ok' =", 10 || 'ok');//10
+        log("'yes' || null =", 'yes' || null);//yes
+        log("'' || 25 =", '' || 25);//25  
+        log("undefined || false =", undefined || false);//false
+        
+        var someUserInput;
+        var num = someUserInput || 10 ;   
+        log(num);
+
+        log("10 && 'ok' =", 10 && 'ok');//ok  
+        log("'yes' && null =", 'yes' && null);//null  
+        log("'' && 25 =", '' && 25);//  
+        log("undefined && false =", undefined && false);//undefined  
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT RELATIONAL AND LOGICAL OPERATORS</h1>
+</body>
+</html>
