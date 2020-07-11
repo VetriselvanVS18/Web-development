@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        log = console.log;
+        var user = new Object();
+        log(user);
+        user.name = 'Javascript';
+        user.sayHi = function(){
+            log('hi');
+        }
+        log(user.hasOwnProperty('name'));
+        log(user.toString('name'));
+
+        var employee1 ={
+            name : 'Vetri',
+            designation : 'Cricketer',
+            salary : 75000
+        };
+        employee1.salary=175000;//the value of the property can be changed outside the object, so this will become the new value.
+        log(employee1.salary);
+
+        //another example
+        var employee2 ={
+            name : 'smriti'
+        };
+        employee2.name = 'Rithika';//value of the property can be changed outside the property,so this will become the new value.
+        log(employee2.name);
+
+        //using Object.defineProperty function we can restrict this changes
+        var employee3 ={};
+        Object.defineProperty(employee3,'name',{
+            configurable : true,
+            writable : false,
+            enumerable : true,
+            value : 'Krishna'
+        });
+        employee3.name = 'dhoni';
+        log(employee3.name);//Krishna
+
+        employee3.designation = 'Developer';
+        employee3.salary = 30000;
+        for (prop in employee3){
+            log(prop , employee3[prop]);
+        }
+        Object.defineProperty(employee3,'salary',{
+            configurable : true,
+            writable : true,
+            enumerable : false//this will hide the 'salary' property from displaying in the output.
+        });
+        log('Result after enumerable is turned to false in salary property');
+        for (prop in employee3){
+            log(prop ,employee3[prop]);
+        }
+
+        employee3.bonus = 60000;
+        log(employee3.bonus);
+        delete employee3.bonus;//we can delete this property
+        log(employee3.bonus);
+        employee3.bonus = 65000;
+        Object.defineProperty(employee3,'bonus',{
+            configurable : false
+        });
+        delete employee3.bonus;//we cannot delete this property now because it is not configurable anymore
+        log(employee3.bonus);
+        employee3.bonus = 400000;
+        log(employee3.bonus);
+
+        var employee4 ={
+            name : 'Annadurai',
+            bonus : 0,
+            yoj : 2010,
+            get newbonus(){
+                return this.bonus;
+            },
+            set newbonus(newbon){
+                if(newbon <= 20 && this.yoj < 2015) this.bonus = newbon;
+            }
+        }
+        employee4.newbonus = 10;
+        log(employee4);
+
+        //object.defineproperties
+        var employee5 ={};
+        Object.defineProperties(employee5,{
+            name :{
+                value: 'smriti',
+            },
+            yoj :{
+                value: 2010,
+                writable: false,
+                configurable: false
+            },
+            salary :{
+                value: 45000,
+                enumerable: false
+            },
+            _bonus :{
+                value: 0,
+                writable :true
+            },
+            bonus :{
+                get: function(){
+                    return this._bonus;
+                },
+                set: function(newbonus){
+                    log(newbonus);
+                    if(newbonus <= 20 && this.yoj < 2015){
+                        this._bonus = newbonus; 
+                    }
+                }
+            }
+        });
+        employee5.bonus = 10;
+        log(employee5);
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT OBJECTS PART(2)</h1>
+</body>
+</html>

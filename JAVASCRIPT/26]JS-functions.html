@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        log = console.log;
+        //constructor function
+        var addNums = new Function('num1', 'num2', 'return num1 + num2');
+        log('3 + 4 = ', addNums(3,4));
+
+        //normal function
+        function sum(num1, num2){
+            return num1 + num2;
+        }
+        log(sum('9 + 8 = ', 9+8));
+
+        var add2Nums = addNums;
+        addNums = null;//here after not a function
+        log('8 + 7 = ', add2Nums(8,7));//works perfectly
+
+        //3rd method
+        var doubleIt = function(value){
+            return value*2;
+        }
+        log('double of 3 : ', doubleIt(3));
+        log('excess para : ', doubleIt(4, 4, 4));//will output only 8
+        log('no para : ', doubleIt());//will output NaN (Not a Number)
+
+        var sum = function(){
+            log(arguments);//array like object
+        }
+        log(sum(1, 2, 3));
+
+        function factorial(num){
+            if(num <= 1) return 1;
+            else return num * factorial(num - 1);
+        }
+        log('factorial of 5 : ', factorial(5));
+
+        var findFactorial = factorial;
+        log('findFactorial of 6 : ', findFactorial(6));
+        factorial = null;
+        //log('findFactorial of 7 : ', findFactorial(7));//this will throw an error
+
+        //inorder to overcome that error let's use 'callee'
+        function factorial2(num){
+            if(num <= 1) return 1;
+            else return num * arguments.callee(num - 1);//this line is changed that's it
+        }
+        log('factorial of 5 : ', factorial2(5));
+
+        var findFactorial = factorial2;
+        log('findFactorial of 6 : ', findFactorial(6));
+        factorial = null;
+        log('findFactorial of 7 : ', findFactorial(7));//this will work perfectly
+
+        //IIFE Immedietly Invoked Function Expression
+        (function(){
+            var name = 'vs18';
+            log(name);
+        })();
+        log(name);//won't provide anything
+
+        //named IIFE
+        (function sayName(name){
+            log(name);
+        })('Smriti Mandhana');//this can used to provide value to the arguments
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPTS FUNCTIONS</h1>
+</body>
+</html>

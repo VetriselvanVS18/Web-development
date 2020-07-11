@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var log = console.log;
+        // Math.min and Math.max
+        var maxValue = Math.max(23, 45, 67, 83, 22, 56, 89);
+        log(maxValue);
+        var minValue = Math.min(34, 45, 26, 13, 76, 89, 11);
+        log(minValue);
+
+        //rounding => if >= .5 then round with next number ,if < .5 round with before number.
+        log('round 35.25 :',Math.round(35.25));//35
+        log('round 35.50 :',Math.round(35.50));//36
+        log('round 35.75 :',Math.round(35.75));//36
+
+        //ceil => from .1 to .9 it will took the next value
+        log('ceil 6.1 : ',Math.ceil(6.1));//7
+        log('ceil 6.9 : ',Math.ceil(6.9));//7
+
+        //floor => from .1 to .9 it will took the before value
+        log('floor 6.1 : ',Math.floor(6.1));//6
+        log('floor 6.9 : ',Math.floor(6.9));//6
+        
+        //rendom => if no argument is given it will generate a fraction value between 0 to 1.
+        log('random : ',Math.random());
+
+        //if we want number between 100 to 500
+        var firstValue = 100;
+        var lastValue = 500;
+        var randomNum = Math.floor(Math.random() * 400 + 100);
+        log('random number b/w 100 to 500 : ',randomNum);
+
+        //to make it user friendly
+        function generator(first, last){
+            return Math.floor(Math.random() * (last - first) + first); 
+        }
+        log('random number b/w 20 to 30 : ',generator(20,30));
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT MATH FUNCTION</h1>
+</body>
+</html>

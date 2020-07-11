@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sports = ['cricket', 'soccer', 'football', 'hockey', 'carrom', 'chess', 'volleyball'];
+        var num = [10, 32, 23, 54 , 100, 453, 44, 65, 87];
+        log = console.log;
+        log('sports :', sports);
+        log('num :' , num);
+        
+        //reverse function
+        var games = ['cricket', 'soccer', 'football', 'hockey', 'carrom', 'chess', 'volleyball'];
+        games.reverse();
+        log('reversed games :', games);
+
+        //sort function works properly on string
+        names = ['vetri', 'rithika', 'mandhana', 'smriti', 'indhu', 'virat', 'kohli'];
+        number = [10, 32, 23, 54 , 100, 453, 44, 65, 87];
+        names.sort();
+        number.sort();
+        log('sorted names :', names);
+        log('sorted number :', number);//this will convert the number into string and then it will sort, so the sorting will be wrong
+        
+        //to sort the numbers in asending order
+        var sortedNumAscending = num.sort((a, b)=>{
+            log('sorting', a, b);
+            if(a > b) return 1;
+            else if(b > a) return -1;
+            else return 0; 
+        });
+        log(sortedNumAscending);
+        //to sort numbers in descending order
+        var sortedNumDescending = num.sort((a, b) =>{
+            if(a < b) return 1;
+            else if(b < a) return -1;
+            else return 0;
+        });
+        log(sortedNumDescending);
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT ARRAY REORDERING</h1>
+    <h3>THIS INCLUDES SORT AND REVERSE FUNCTION</h3>
+</body>
+</html>

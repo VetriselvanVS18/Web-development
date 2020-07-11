@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        log = console.log;
+        //substring
+        var name = 'vetriselvan';
+        log('substring(0,5) : ',name.substring(0,5));
+
+        //creating a string
+        var str = new String('smriti');
+        log('str : ',str);
+        log(new String('rithika').length);
+        
+        var yourself = 'javascript';
+        yourself.color = 'dark';
+        log(yourself.color);//undefined
+
+        //creating an object
+        var no = new Boolean(false);
+        if(no) log("I'm not a boolean false ,but an object with false value");
+        var trueObj = new Boolean(true);
+        log('trueObj : ',trueObj);
+        log('trueObj.toString() : ',trueObj.toString());
+        log('trueObj.valueOf() : ',trueObj.valueOf());
+
+        //some default properties in the object
+        var num = new Number(1000);
+        log('num : ',num);
+        log(num.toString());
+        log(num.toString(2));//binary form
+        log(num.toString(8));//octal
+        log(num.toString(16));//hexadecimal
+        log(num.toLocaleString());//1,000
+        log(num.toFixed(2));//1000.00
+        log(num.toExponential(2));//1.00e^+3
+        log(num.toPrecision(3));//1.00e^+3
+        log(num.toPrecision(4));//1000
+        log(num.toPrecision(5));//1000.0
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT PRIMITIVE WRAPPER TYPES</h1>
+</body>
+</html>

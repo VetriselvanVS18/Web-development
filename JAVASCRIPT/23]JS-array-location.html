@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        log = console.log;
+        var fruits = ['apple', 'orange', 'mango', 'grapes', 'pineapple', 'pommigranet'];
+        var choice = 'mango';
+        var available = fruits.indexOf(choice);
+        //indexOf will provide -1 if there is no such item in the list.
+        if(available != -1){
+            log(choice + ' is available at ' + available);
+        } 
+        else{
+            log(choice + ' is not available.');
+        }
+
+        //lastIndexOf, This will search the item from the last
+        var numArray = [1, 2, 3, 4, 5, 7, 8, 9, 2, 1];
+        log('numArray :', numArray)
+        log('From last :', numArray.lastIndexOf(2));//output will be 8, because last 2 is at the position 8.
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT ARRAY LOCATION</h1>
+    <h3>indexOf and lastIndexOf</h3>
+</body>
+</html>

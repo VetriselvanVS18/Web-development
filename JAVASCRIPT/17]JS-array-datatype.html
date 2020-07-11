@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    //different datatypes can be stored in a single array
+    <script>
+        log = console.log;
+        var myArray ={
+            0 : 200,
+            1 : 'hii',
+            2 : true,
+            3 : null
+        };
+        log(myArray);
+         
+        //constructor array
+        var languages = new Array();
+        log(languages);
+        var students = new Array(10);// array of size 10
+        log(students);
+        var frontEnd = new Array('angular js', 'node js', 'vue js');
+        log(frontEnd);
+
+        //literal array
+        var languages = [];
+        log(languages);
+        var frontEnd = ['angular js', 'node js', 'vue js'];
+        log(frontEnd[1]);
+        log(frontEnd.length);
+        frontEnd[3] = 'ember js';
+        log(frontEnd instanceof Array);
+        log(Array.isArray(frontEnd));
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT INTRODUCTION TO ARRAY DATABASE</h1>
+</body>
+</html>

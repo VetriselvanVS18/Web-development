@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var person = {
+            firstname : 'vetri',
+            lastname : 'selvan',
+            //with the help of 'get' we can call the method like a property on the outside of the object (i.e:person.fullname)
+            get fullname(){
+                return `${person.firstname} ${person.lastname}`;
+            },
+            //with the help of 'set' we can set the value for this method from the outside
+            set fullname(value){
+                var parts = value.split(' ');
+                this.firstname = parts[0];
+                this.lastname = parts[1];
+            }
+        }
+        person.fullname = 'Rithika vaayadi';
+        console.log(person);
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT GETTERS AND SETTERS</h1>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var log = console.log;
+        var fruits = ['apple', 'orange'];
+        var freshFruits = fruits;
+        log('fruits :', fruits);
+        log('freshFruits :', freshFruits);
+        freshFruits.push('banana');//will affect both
+        log('fruits :', fruits);
+        log('freshFruits :', freshFruits);
+
+        //concat : This can be used to create a copy.
+        var newFruits = fruits.concat();
+        newFruits.push('cherry');//will affect only newFruits
+        log('fruits :', fruits);
+        log('newFruits :', newFruits);
+        //we can also use concat to add items
+        var add = newFruits.concat('mango', 'blackberry');
+        log('add :', add);
+        var more = add.concat('kiwi', 'papaya');
+        log('more :', more);
+
+        //slice : This can be used to copy as well as to cut a certain portion.
+        var three = more.slice(0, 3);
+        log('three :', three);
+        var remaining = more.slice(3);
+        log('remaining :', remaining);
+
+        //splice : This can be used to delete a certain portion of items.
+        var moreDup = more.concat();
+        var removed = moreDup.splice(3, 2);
+        //variable.splice(starting position of operation, No. of items to be deleted, 'replacement')
+        log('moreDup :', moreDup);
+        log('removed :', removed);
+        var newDup = more.concat();
+        var insert = newDup.splice(0, 0, 'grapes');//will insert grapes at 0th-position.
+        log('newDup :', newDup);
+        log('insert :', insert);
+        var newly = ['gova', 'jackfuit', 'berry']
+        newly.splice(1, 1, 'carrot', 'pommigranet');//will insert carrot, pommigranet at 1st-position by deleting the element in 1st-position.
+        log('newly :', newly);
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT ARRAY MANUPULATION</h1>
+    <h3>CONCAT - SLICE - SPICE</h3>
+</body>
+</html>

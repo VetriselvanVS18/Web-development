@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //foreach
+        var availFruits = ['apple', 'mango', 'orange', 'banana'];
+        var testingForEach = availFruits.forEach(function(item, index, array){
+            console.log('In this fruit array' + array);
+            console.log('Fruit ' + item + ' is at position ' + index);
+        });
+        console.log('testingForEach', testingForEach)//undefined => because foreach won't return anything or create anything it will just process the given data.
+        
+        //map
+        var pricelist = [100, 15, 234, 456, 657];
+        var discount = 10;
+        var testingmap = pricelist.map(function(price){//I'm not providing the argument index & property because i don't need that here. 
+            return price - (discount*10/100);
+        });
+        console.log('testingmap', testingmap);//this will create a new array with a size same of input array to store the output.
+        
+        //filter
+        var employee =[
+            {
+                role : 'junior developer',
+                salary : 23000
+            },
+            {
+                role : 'senior developer',
+                salary : 234000
+            },
+            {
+                role : 'front end developer',
+                salary : 230000
+            },
+            {
+                role : 'back end developer',
+                salary : 23000
+            },
+            {
+                role : 'gamer',
+                salary : 230000
+            }
+        ]
+        var highPaid = employee.filter(function(value){
+            return value.salary > 50000;
+        });
+        console.log(highPaid);
+
+
+        //every => this will return 'true' only when all the values in the array satisfies the given condition.
+        function getResult(marklist){
+            var result = marklist.every((value)=>{
+                return value > 45;
+            });
+            if(result) return 'all pass';
+            else return 'only few have passed';
+        }
+        console.log('Above 45', getResult([46,48,98,97,74]));
+        console.log('Below 45', getResult([23,36,78,98,99]));
+
+        //some => this will return 'true' value even some of the values in the array satisfies the provided condition.
+        function get2Result(marklist){
+            var result2 = marklist.some((value)=>{
+                return value < 45;
+            });
+            if(result2) return 'only few have passed';
+            else return 'all pass';
+        }
+        console.log('Above 45', get2Result([46,48,98,97,74]));
+        console.log('Below 45', get2Result([23,36,78,98,99])); 
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT ITRATIVE METHODS</h1>
+</body>
+</html>

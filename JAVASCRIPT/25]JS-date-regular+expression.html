@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //date
+        var now = new Date();
+        console.log(now);//will give you the current day month date year time
+        var dob = new Date('30,June2001');
+        console.log(dob);
+        dob = new Date('2001-07-01');//this dob will have no effect on the previous dob
+        console.log(dob);
+        console.log(dob.valueOf());//this will provide the value
+
+        //regular (RegExp)
+        //1st method of creation
+        var regex = /[0-9]/;
+        console.log(regex.test('some text'));//false
+        console.log(regex.test('some 1234 text'));//true
+        //2nd method of creation
+        var diff = new RegExp('[0-9]');
+        console.log(diff.test('some text'));//false
+        console.log(diff.test('some 1234 text'));//true
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT DATE AND REGULAR EXPERSSION OBJECTS</h1>
+</body>
+</html>

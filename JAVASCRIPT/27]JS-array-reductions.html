@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //reduce => it is mainly used to compress an array into a single value with the help of the accumulator.
+        log = console.log;
+        var numbers = [20, 70, 80, 40 ,35, 78];
+        var sum = numbers.reduce(function(accumulator, currentvalue, index){
+            log('iterations : ', index);
+            log('accum :', accumulator);
+            log('currentvalue : ', currentvalue);
+            return accumulator + currentvalue;
+        });
+        log(sum);
+
+        var nestedArray = [[1,2], [3,4], [5,6], [7,8]];
+        var add = nestedArray.reduce((accumulator,currentvalue) => {
+            return accumulator.concat(currentvalue);
+        });
+        log(add);
+
+        var char = ['b', 'v', 'h', 'u', 'b', 'u', 'b', 's', 'r', 'v'];
+        var noRep = char.reduce((accumulator, currentvalue) => {
+            if(accumulator.indexOf(currentvalue) === -1) accumulator.push(currentvalue);
+            return accumulator;
+        },[]);// [] is the initial value of accumulator
+        log(noRep);
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT ARRAY REDUCTIONS</h1>
+</body>
+</html>
